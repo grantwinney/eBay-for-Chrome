@@ -1,0 +1,31 @@
+<!--
+  - Copyright (C) 2007-2015 eBay Inc. All Rights Reserved.
+  -->
+
+<div id="search-container" tabindex="0">
+  <div id="search-textbox-container" class="disconnected">
+    <!-- Prevents the search-textbox element from receiving focus on
+    popup opening, which we don't want.-->
+    <input type="text" style="position: fixed; left: -10000000px;" autofocus/>
+
+    <label for="search-textbox" rel="i18n[sidebar.searchBar.empty]"
+      class="hidden-for-accessibility"></label>
+    <input id="search-textbox" type="text" maxlength="300" tabindex="-1"/>
+    <img id="search-placeholder-button" src="../skin/core/img/magnify-glass.png"></img>
+  </div>
+
+  <div id="search-buttons-container">
+    <div class="search-button-container">
+      <button id="search-button" data-update-tooltip="true"
+        title="i18n[sidebar.searchBar.empty]" class="primary-button">
+        <img class="search-button-image" src="../skin/core/img/search-magnify-glass.png"></img>
+      </button>
+    </div>
+    <div class="search-close-separator-container">
+      <div class="search-close-separator"></div>
+    </div>
+    <div class="search-close-button-container" tabindex="0">
+      <a href="#" id="search-close-button" rel="i18n[search.cancel]"></a>
+    </div>
+  </div>
+</div>

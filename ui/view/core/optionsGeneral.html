@@ -1,0 +1,38 @@
+<!--
+  - Copyright (C) 2007-2015 eBay Inc. All Rights Reserved.
+  -->
+
+<div class="pane-content general-pane-content">
+
+  <div class="general-country-section">
+    <div class="general-country-title header-title" rel="i18n[options.general.country]"></div>
+    <div class="content-section">
+      <div class="general-preferred-site-title" rel="i18n[options.general.yourEbaySiteIs]"></div>
+      <img id="general-preferred-site-flag"></img><span id="general-preferred-site"></span>
+      <div class="general-auto-detect-site-container">
+        <input id="general-auto-detect-site" type="checkbox" ebayproperty='PROP_CHOSEN_SITE'/>
+        <label for="general-auto-detect-site" rel="i18n[options.general.autoDetectSite]"></label>
+      </div>
+      <select id="general-preferred-site-list" ebayproperty='PROP_CHOSEN_SITE'></select>
+    </div>
+  </div>
+
+  <div class="general-security-section">
+    <div class="general-security-title header-title" rel="i18n[options.general.security]"></div>
+    <div class="content-section general-security-content-section">
+      <div class="content-section-row">
+        <input id="general-auto-connect" type="checkbox" ebayproperty="PROP_AUTO_CONNECT"/>
+        <label for="general-auto-connect" rel="i18n[options.general.autoConnectOnStartup]"></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="general-feedback-section">
+    <div class="general-feedback-title header-title"
+      rel="i18n[options.general.tellUsWhatYouThink]"></div>
+    <div class="content-section">
+      <span rel="i18n[options.general.loveToHearFromYou]"></span>
+      <a href="#" id="general-feedback-link" rel="i18n[options.general.giveUsFeedback]"></a>
+    </div>
+  </div>
+</div>

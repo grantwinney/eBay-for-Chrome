@@ -1,0 +1,112 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_extension_name__",
+  "version": "5.3.2",
+  "manifest_version": 2,
+  "description": "__MSG_extension_description__",
+  "icons": {
+    "16": "ui/skin/core/img/ebay16.png",
+    "32": "ui/skin/core/img/ebay32.png",
+    "48": "ui/skin/core/img/ebay48.png",
+    "128": "ui/skin/core/img/ebay128.png"
+  },
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": {
+      "19": "ui/skin/core/img/ebay19.png",
+      "38": "ui/skin/core/img/ebay38-2-transp.png"
+    },
+    "default_title": "__MSG_button_openPopup__",
+    "default_popup": "ui/view/sidebar.html"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "http://*.ebay.com/*",
+        "https://*.ebay.com/*",
+        "http://*.ebay.co.uk/*",
+        "https://*.ebay.co.uk/*",
+        "http://*.ebay.com.au/*",
+        "https://*.ebay.com.au/*",
+        "http://*.ebay.at/*",
+        "https://*.ebay.at/*",
+        "http://*.ebay.be/*",
+        "https://*.ebay.be/*",
+        "http://*.ebay.ca/*",
+        "https://*.ebay.ca/*",
+        "http://*.ebay.com.hk/*",
+        "https://*.ebay.com.hk/*",
+        "http://*.ebay.fr/*",
+        "https://*.ebay.fr/*",
+        "http://*.ebay.de/*",
+        "https://*.ebay.de/*",
+        "http://*.ebay.in/*",
+        "https://*.ebay.in/*",
+        "http://*.ebay.ie/*",
+        "https://*.ebay.ie/*",
+        "http://*.ebay.it/*",
+        "https://*.ebay.it/*",
+        "http://*.ebay.com.my/*",
+        "https://*.ebay.com.my/*",
+        "http://*.ebay.nl/*",
+        "https://*.ebay.nl/*",
+        "http://*.ebay.ph/*",
+        "https://*.ebay.ph/*",
+        "http://*.ebay.pl/*",
+        "https://*.ebay.pl/*",
+        "http://*.ebay.com.sg/*",
+        "https://*.ebay.com.sg/*",
+        "http://*.ebay.es/*",
+        "https://*.ebay.es/*",
+        "http://*.ebay.ch/*",
+        "https://*.ebay.ch/*"
+      ],
+      "js": [
+        "lib/jquery-2.2.1.min.js",
+        "background/core/helpers/browserHelper.js",
+        "background/helpers/logger.js",
+        "ui/view/contentScript.js"]
+    }
+  ],
+  "background": {
+    "page" : "background/background.html"
+  },
+
+  "options_page": "ui/view/options.html",
+  "permissions": [
+    "gcm",
+    "tabs",
+    "contextMenus",
+    "notifications",
+    "webRequest",
+    "*://*.ebay.com/*",
+    "*://*.ebay.co.uk/*",
+    "*://*.ebay.com.au/*",
+    "*://*.ebay.at/*",
+    "*://*.ebay.be/*",
+    "*://*.ebay.ca/*",
+    "*://*.ebay.com.hk/*",
+    "*://*.ebay.fr/*",
+    "*://*.ebay.de/*",
+    "*://*.ebay.in/*",
+    "*://*.ebay.ie/*",
+    "*://*.ebay.it/*",
+    "*://*.ebay.com.my/*",
+    "*://*.ebay.nl/*",
+    "*://*.ebay.ph/*",
+    "*://*.ebay.pl/*",
+    "*://*.ebay.com.sg/*",
+    "*://*.ebay.es/*",
+    "*://*.ebay.ch/*",
+    "http://*.ebayimg.com/"
+  ],
+  "web_accessible_resources": [
+    "_locales/en/licence.xhtml",
+    "ui/view/core/itemBox.html",
+    "ui/view/core/notificationItemBox.html",
+    "ui/skin/core/options.css"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}

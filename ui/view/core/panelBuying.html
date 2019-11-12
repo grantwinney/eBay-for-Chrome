@@ -1,0 +1,80 @@
+<div>
+  <div id="panel-buying-loading" class="tab-buying">
+    <div class="panel-loading-spinner"></div>
+  </div>
+  <div id="panel-buying-empty">
+    <img class="panel-buying-empty-image" src="../skin/core/img/buying-empty.png"
+      alt="i18n[empty.buying.shoppingBag.alt]"></img>
+    <h2 class="panel-buying-empty-text" rel="i18n[empty.buying.description]"></h2>
+    <button id="panel-buying-empty-button" data-update-tooltip="true" class="secondary-button">
+      <div rel="i18n[empty.shop.link]"></div>
+    </button>
+  </div>
+  <div id="panel-buying-main">
+    <div id="panel-buying-main-basic">
+      <div id="panel-buying-bid" class="item-list-box">
+        <h3 class="item-list-box-header" rel="i18n[list.bid]"></h3>
+        <div id="panel-buying-bid-list"></div>
+      </div>
+      <div id="panel-buying-offer" class="item-list-box">
+        <h3 class="item-list-box-header" rel="i18n[list.offers]"></h3>
+        <div id="panel-buying-offer-list"></div>
+      </div>
+      <div id="panel-buying-won" class="item-list-box">
+        <h3 class="item-list-box-header" rel="i18n[list.won]"></h3>
+        <div id="panel-buying-won-list"></div>
+      </div>
+      <div id="panel-buying-lost" class="item-list-box">
+        <h3 class="item-list-box-header" rel="i18n[list.lost]"></h3>
+        <div id="panel-buying-lost-list"></div>
+      </div>
+      <div id="panel-buying-converted-currency-note" class="panel-converted-currency-note"
+        rel="i18n[list.converted.currency.note]"></div>
+    </div>
+    <div id="panel-buying-main-full-list">
+      <div id="panel-buying-full" class="item-list-box">
+        <div id="panel-buying-dock-header-box" class="item-list-box-dock-header-box">
+          <div id="item-list-buying-dock-edit-header" class="item-list-box-edit-header">
+          <!-- XXX: TODO: hide the Edit links because the Api we use to delete items for the GMEB and GMES is not working right now for us.
+            <a href="#" id="item-list-buying-dock-edit" class="item-list-edit"
+              rel="i18n[list.action.edit]"></a>
+            -->
+            <a href="#" id="item-list-buying-dock-refine" class="item-list-refine">
+              <span rel="i18n[list.action.refine]" tabindex="0"></span>
+            </a>
+          </div>
+          <div id="item-list-buying-dock-cancel-header" class="item-list-box-cancel-header">
+            <a href="#" id="item-list-buying-dock-cancel" rel="i18n[list.action.cancel]"></a>
+          </div>
+        </div>
+        <div id="panel-buying-float-header-box" class="item-list-box-float-header-box">
+          <div id="item-list-buying-float-edit-header" class="item-list-box-edit-header">
+          <!-- XXX: TODO: hide the Edit links because the Api we use to delete items for the GMEB and GMES is not working right now for us.
+            <a href="#" id="item-list-buying-float-edit" class="item-list-edit"
+              rel="i18n[list.action.edit]"></a>
+            -->
+            <a href="#" id="item-list-buying-float-refine" class="item-list-refine float-refine">
+              <span rel="i18n[list.action.refine]" tabindex="0"></span>
+            </a>
+          </div>
+          <div id="item-list-buying-float-cancel-header" class="item-list-box-cancel-header">
+            <a href="#" id="item-list-buying-float-cancel" rel="i18n[list.action.cancel]"></a>
+          </div>
+        </div>
+        <div id="panel-buying-full-list"></div>
+      </div>
+      <div id="panel-buying-full-converted-currency-note" class="panel-converted-currency-note"
+        rel="i18n[list.converted.currency.note]"></div>
+    </div>
+    <div id="panel-buying-lazy-loading" class="lazy-loading">
+      <div class="panel-loading-spinner panel-lazy-loading-spinner"></div>
+    </div>
+  </div>
+  <div id="panel-buying-buttons-container">
+    <div class="panel-buying-buttons-inner-container">
+      <button id="panel-buying-delete-button" class="primary-button">
+        <div rel="i18n[list.action.delete]"></div>
+      </button>
+    </div>
+  </div>
+</div>

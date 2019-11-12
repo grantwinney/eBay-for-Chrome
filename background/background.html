@@ -1,0 +1,86 @@
+<!--
+  - Copyright (C) 2007-2015 eBay Inc. All Rights Reserved.
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="/lib/jquery-2.2.1.min.js"></script>
+  <script type="text/javascript" src="i18n.js"></script>
+  <script type="text/javascript" src="/lib/src/jquery.i18n.js"></script>
+  <script type="text/javascript" src="/lib/redux.min.js"></script>
+  <script type="text/javascript" src="/lib/lodash.min.js"></script>
+
+  <script type="text/javascript" src="core/ebay-client.js"></script>
+  <script type="text/javascript" src="core/actions.js"></script>
+  <script type="text/javascript" src="core/reducers.js"></script>
+  <script type="text/javascript" src="core/store.js"></script>
+
+  <script type="text/javascript" src="configs/endpoints.js"></script>
+  <script type="text/javascript" src="configs/sites.js"></script>
+  <script type="text/javascript" src="configs/urls.js"></script>
+  <script type="text/javascript" src="configs/init.js"></script>
+
+  <script type="text/javascript" src="core/configs/endpoints.js"></script>
+  <script type="text/javascript" src="core/configs/rover.js"></script>
+  <script type="text/javascript" src="core/configs/sites.js"></script>
+  <script type="text/javascript" src="core/configs/urls.js"></script>
+  <script type="text/javascript" src="core/configs/init.js"></script>
+
+  <script type="text/javascript" src="core/helpers/browserHelper.js"></script>
+  <script type="text/javascript" src="helpers/logger.js"></script>
+  <script type="text/javascript" src="core/objects/account.js"></script>
+  <script type="text/javascript" src="core/objects/alert.js"></script>
+  <script type="text/javascript" src="core/objects/favoriteSeller.js"></script>
+  <script type="text/javascript" src="core/objects/item.js"></script>
+  <script type="text/javascript" src="core/objects/favoriteSearch.js"></script>
+  <script type="text/javascript" src="core/objects/transaction.js"></script>
+  <script type="text/javascript" src="core/objects/recentSearch.js"></script>
+  <script type="text/javascript" src="core/helpers/topics.js"></script>
+  <script type="text/javascript" src="helpers/observerHelper.js"></script>
+  <script type="text/javascript" src="helpers/timer.js"></script>
+  <script type="text/javascript" src="core/helpers/apiHelper.js"></script>
+  <script type="text/javascript" src="helpers/utilityHelper.js"></script>
+  <script type="text/javascript" src="core/helpers/objectHelper.js"></script>
+  <script type="text/javascript" src="core/helpers/eventTracker.js"></script>
+  <script type="text/javascript" src="core/helpers/site.js"></script>
+
+  <script type="text/javascript" src="core/helpers/roverUrlHelper.js"></script>
+  <script type="text/javascript" src="core/storage/propertyDAO.js"></script>
+  <script type="text/javascript" src="core/storage/storageService.js"></script>
+  <script type="text/javascript" src="core/apis/tradingApi.js"></script>
+  <script type="text/javascript" src="core/apis/shoppingApi.js"></script>
+  <script type="text/javascript" src="core/apis/myEbayApplicationApi.js"></script>
+  <script type="text/javascript" src="core/apis/autoCompleteApi.js"></script>
+  <script type="text/javascript" src="core/apis/medsApi.js"></script>
+  <script type="text/javascript" src="core/apis/symbanApi.js"></script>
+  <script type="text/javascript" src="core/apis/authenticationApi.js"></script>
+  <script type="text/javascript" src="core/apis/mdnsApi.js"></script>
+  <script type="text/javascript" src="core/services/commonService.js"></script>
+  <script type="text/javascript" src="core/services/zoomService.js"></script>
+  <script type="text/javascript" src="core/services/favoriteSellerService.js"></script>
+  <script type="text/javascript" src="core/services/favoriteSearchService.js"></script>
+  <script type="text/javascript" src="core/services/messagePanelService.js"></script>
+  <script type="text/javascript" src="core/services/accountService.js"></script>
+  <script type="text/javascript" src="core/services/myEbayService.js"></script>
+  <script type="text/javascript" src="core/services/symbanService.js"></script>
+  <script type="text/javascript" src="core/services/listingDraftService.js"></script>
+  <script type="text/javascript" src="core/services/gcmService.js"></script>
+  <script type="text/javascript" src="core/services/authenticationService.js"></script>
+  <script type="text/javascript" src="core/services/recentSearchMedsService.js"></script>
+  <script type="text/javascript" src="core/helpers/eventAnalytics.js"></script>
+  <script type="text/javascript" src="newAlertOpener.js"></script>
+  <script type="text/javascript" src="core/updateController.js"></script>
+  <script type="text/javascript" src="background.js"></script>
+  <script type="text/javascript" src="contextMenuHandler.js"></script>
+  <script type="text/javascript" src="browserActionHandler.js"></script>
+</head>
+<body>
+  <audio src="/ui/sound/alert-generic-gcm.mp3" id="alert_sound_generic_gcm">
+  </audio>
+  <audio src="/ui/sound/itmsold.mp3" id="alert_sound_itmsold_gcm">
+  </audio>
+  <audio src="/ui/sound/svdsrch.mp3" id="alert_sound_svdsrch_gcm">
+  </audio>
+</body>
+</html>

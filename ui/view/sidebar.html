@@ -1,0 +1,137 @@
+<!--
+  - Copyright (C) 2007-2015 eBay Inc. All Rights Reserved.
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" type="text/css" href="/ui/skin/core/master.css" />
+  <link rel="stylesheet" type="text/css" href="/ui/skin/core/jquery-ui.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/ui/skin/core/jquery.mCustomScrollbar.min.css"/>
+
+</head>
+<body id="main-window" tabindex="-1">
+  <div id="sidebar">
+    <section id="search"></section>
+    <div id="sidebar-general-message">
+      <h2 class="general-message-retirement" rel="i18n[general.message.retirement]"></h2>
+    </div>
+    <div id="sidebar-container-offline">
+      <img class="sidebar-container-offline-image"
+        src="/ui/skin/core/img/error-message.png" alt="i18n[sidebar.no.internet.connection]"></img>
+      <h2 class="sidebar-container-offline-text" rel="i18n[sidebar.no.internet.connection]"></h2>
+    </div>
+    <div id="sidebar-container-online">
+      <section id="signed-in-search-content"></section>
+      <div id="signed-out-content">
+        <section id="sign-in"></section>
+      </div>
+      <div id="signed-in-content">
+        <section id="tabs"></section>
+        <section id="panels"></section>
+      </div>
+      <section id="status-panel"></section>
+    </div>
+    <section id="refine-content"></section>
+    <section id="message-panel"></section>
+  </div>
+  <script type="text/javascript" src="/lib/jquery-2.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/background/i18n.js"></script>
+  <script type="text/javascript" src="/lib/src/jquery.i18n.js"></script>
+  <script type="text/javascript" src="/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="/lib/owl.carousel.js"></script>
+  <script type="text/javascript" src="/lib/redux.min.js"></script>
+  <script type="text/javascript" src="/lib/lodash.min.js"></script>
+  <script type="text/javascript" src="/background/helpers/logger.js"></script>
+
+  <script type="text/javascript" src="/background/core/ebay-client.js"></script>
+  <script type="text/javascript" src="/background/core/actions.js"></script>
+  <script type="text/javascript" src="/background/core/reducers.js"></script>
+  <script type="text/javascript" src="/background/core/store.js"></script>
+
+  <script type="text/javascript" src="/background/configs/endpoints.js"></script>
+  <script type="text/javascript" src="/background/configs/sites.js"></script>
+  <script type="text/javascript" src="/background/configs/urls.js"></script>
+  <script type="text/javascript" src="/background/configs/init.js"></script>
+
+  <script type="text/javascript" src="/background/core/configs/endpoints.js"></script>
+  <script type="text/javascript" src="/background/core/configs/rover.js"></script>
+  <script type="text/javascript" src="/background/core/configs/sites.js"></script>
+  <script type="text/javascript" src="/background/core/configs/urls.js"></script>
+  <script type="text/javascript" src="/background/core/configs/init.js"></script>
+
+  <script type="text/javascript" src="/background/core/helpers/browserHelper.js"></script>
+  <script type="text/javascript" src="/background/core/helpers/objectHelper.js"></script>
+  <script type="text/javascript" src="/background/core/helpers/topics.js"></script>
+  <script type="text/javascript" src="/background/helpers/observerHelper.js"></script>
+  <script type="text/javascript" src="/background/helpers/utilityHelper.js"></script>
+  <script type="text/javascript" src="/background/core/helpers/site.js"></script>
+
+  <script type="text/javascript" src="/background/helpers/timer.js"></script>
+  <script type="text/javascript" src="/background/core/helpers/roverUrlHelper.js"></script>
+  <script type="text/javascript" src="/background/core/objects/item.js"></script>
+  <script type="text/javascript" src="/background/core/storage/propertyDAO.js"></script>
+
+  <script type="text/javascript" src="/background/core/objects/account.js"></script>
+  <script type="text/javascript" src="/background/core/objects/alert.js"></script>
+  <script type="text/javascript" src="/background/core/objects/favoriteSeller.js"></script>
+
+  <script type="text/javascript" src="/background/core/objects/favoriteSearch.js"></script>
+  <script type="text/javascript" src="/background/core/objects/transaction.js"></script>
+  <script type="text/javascript" src="/background/core/objects/recentSearch.js"></script>
+
+  <script type="text/javascript" src="/background/core/helpers/apiHelper.js"></script>
+  <script type="text/javascript" src="/background/core/helpers/eventTracker.js"></script>
+
+  <script type="text/javascript" src="/background/core/apis/tradingApi.js"></script>
+  <script type="text/javascript" src="/background/core/apis/shoppingApi.js"></script>
+  <script type="text/javascript" src="/background/core/apis/myEbayApplicationApi.js"></script>
+  <script type="text/javascript" src="/background/core/apis/autoCompleteApi.js"></script>
+  <script type="text/javascript" src="/background/core/apis/medsApi.js"></script>
+  <script type="text/javascript" src="/background/core/apis/symbanApi.js"></script>
+  <script type="text/javascript" src="/background/core/apis/authenticationApi.js"></script>
+  <script type="text/javascript" src="/background/core/apis/mdnsApi.js"></script>
+
+  <script type="text/javascript" src="/background/core/services/commonService.js"></script>
+  <script type="text/javascript" src="/background/core/services/zoomService.js"></script>
+  <script type="text/javascript" src="/background/core/services/favoriteSellerService.js"></script>
+  <script type="text/javascript" src="/background/core/services/favoriteSearchService.js"></script>
+  <script type="text/javascript" src="/background/core/services/messagePanelService.js"></script>
+  <script type="text/javascript" src="/background/core/services/accountService.js"></script>
+  <script type="text/javascript" src="/background/core/services/myEbayService.js"></script>
+  <script type="text/javascript" src="/background/core/services/symbanService.js"></script>
+  <script type="text/javascript" src="/background/core/services/listingDraftService.js"></script>
+  <script type="text/javascript" src="/background/core/services/gcmService.js"></script>
+  <script type="text/javascript" src="/background/core/services/authenticationService.js"></script>
+  <script type="text/javascript" src="/background/core/services/recentSearchMedsService.js"></script>
+  <script type="text/javascript" src="/background/core/services/informationRefreshService.js"></script>
+
+  <script type="text/javascript" src="/background/core/helpers/eventAnalytics.js"></script>
+  <script type="text/javascript" src="/background/core/updateController.js"></script>
+
+  <script type="text/javascript" src="/background/newAlertOpener.js"></script>
+  <script type="text/javascript" src="/background/contextMenuHandler.js"></script>
+  <script type="text/javascript" src="/background/browserActionHandler.js"></script>
+
+  <script type="text/javascript" src="core/searchBox.js"></script>
+  <script type="text/javascript" src="core/signInForm.js"></script>
+  <script type="text/javascript" src="core/itemBox.js"></script>
+  <script type="text/javascript" src="core/messagePanel.js"></script>
+  <script type="text/javascript" src="core/notificationItemBox.js"></script>
+  <script type="text/javascript" src="core/panelNotification.js"></script>
+  <script type="text/javascript" src="core/panelWatching.js"></script>
+  <script type="text/javascript" src="core/panelBuying.js"></script>
+  <script type="text/javascript" src="core/panelSelling.js"></script>
+  <script type="text/javascript" src="core/tabContainer.js"></script>
+  <script type="text/javascript" src="core/panelContainer.js"></script>
+  <script type="text/javascript" src="core/statusPanel.js"></script>
+  <script type="text/javascript" src="core/searchContent.js"></script>
+  <script type="text/javascript" src="core/refineContainer.js"></script>
+
+  <script type="text/javascript" src="core/sidebar.js"></script>
+</body>
+</html>

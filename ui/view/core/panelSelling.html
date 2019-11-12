@@ -1,0 +1,154 @@
+<div>
+  <div id="panel-selling-loading" class="tab-selling">
+    <div class="panel-loading-spinner"></div>
+  </div>
+  <div id="panel-selling-empty">
+    <div class="item-list-box">
+      <h3 class="item-list-box-header" rel="i18n[empty.selling.header]"></h3>
+      <div class="item-box">
+        <div class="panel-selling-empty-row">
+          <div class="panel-selling-empty-image-col">
+            <img class="camera" src="../skin/core/img/selling-empty-camera.png"
+              alt="" role="presentation"></img>
+          </div>
+          <div class="panel-selling-empty-description-col">
+            <div class="panel-selling-empty-section-content"
+              rel="i18n[empty.selling.addPhotos.description]"></div>
+          </div>
+        </div>
+        <div class="panel-selling-empty-row">
+          <div class="panel-selling-empty-image-col">
+            <img class="tag" src="../skin/core/img/selling-empty-tag.png"
+              alt="" role="presentation"></img>
+          </div>
+          <div class="panel-selling-empty-description-col">
+            <div class="panel-selling-empty-section-content"
+              rel="i18n[empty.selling.pickPrice.description]"></div>
+          </div>
+        </div>
+        <div class="panel-selling-empty-row">
+          <div class="panel-selling-empty-image-col">
+            <img class="package" src="../skin/core/img/selling-empty-package.png"
+              alt="" role="presentation"></img>
+          </div>
+          <div class="panel-selling-empty-description-col">
+            <div class="panel-selling-empty-section-content"
+              rel="i18n[empty.selling.publish.description]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="panel-selling-summary">
+    <a href="#" id="panel-selling-summary-awaiting-shipment">
+      <div class="panel-selling-summary-item">
+        <div class="panel-selling-summary-count-container">
+          <h1 id="panel-selling-summary-awaiting-shipment-count"
+            class="panel-selling-summary-count"></h1>
+        </div>
+        <div class="panel-selling-summary-description-container">
+          <h2 class="panel-selling-summary-description-title"
+            rel="i18n[selling.todo.sold.itemsToShip]"></h2>
+          <div id="panel-selling-summary-description-subtitle"
+            class="panel-selling-summary-description-subtitle"></div>
+        </div>
+      </div>
+    </a>
+    <a href="#" id="panel-selling-summary-offer">
+      <div class="panel-selling-summary-item">
+        <div class="panel-selling-summary-count-container">
+          <h1 id="panel-selling-summary-offer-count"
+            class="panel-selling-summary-count"></h1>
+        </div>
+        <div class="panel-selling-summary-description-container">
+          <h2 id="panel-selling-summary-offer-description-title"
+            class="panel-selling-summary-description-title"></h2>
+          <div id="panel-selling-summary-offer-description-subtitle"
+            class="panel-selling-summary-description-subtitle"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div id="panel-selling-main">
+    <div id="panel-selling-main-basic">
+      <div id="panel-selling-offer" class="item-list-box">
+        <h3 class="item-list-box-header" rel="i18n[list.offers]"></h3>
+        <div id="panel-selling-offer-list"></div>
+      </div>
+      <div id="panel-selling-active" class="item-list-box">
+        <h3 class="item-list-box-header" rel="i18n[list.active]"></h3>
+        <div id="panel-selling-active-list"></div>
+      </div>
+      <div id="panel-selling-sold" class="item-list-box">
+        <h3 class="item-list-box-header" rel="i18n[list.sold]"></h3>
+        <div id="panel-selling-sold-list"></div>
+      </div>
+      <div id="panel-selling-unsold" class="item-list-box">
+        <h3 class="item-list-box-header" rel="i18n[list.unsold]"></h3>
+        <div id="panel-selling-unsold-list"></div>
+      </div>
+      <div id="panel-selling-scheduled" class="item-list-box">
+        <h3 class="item-list-box-header" rel="i18n[list.scheduled]"></h3>
+        <div id="panel-selling-scheduled-list"></div>
+      </div>
+      <div id="panel-selling-converted-currency-note" class="panel-converted-currency-note"
+        rel="i18n[list.converted.currency.note]"></div>
+    </div>
+    <div id="panel-selling-main-full-list">
+      <div id="panel-selling-full" class="item-list-box">
+        <div id="panel-selling-dock-header-box" class="item-list-box-dock-header-box">
+          <div id="item-list-selling-dock-edit-header" class="item-list-box-edit-header">
+          <!-- XXX: TODO: hide the Edit links because the Api we use to delete items for the GMEB and GMES is not working right now for us.
+            <a href="#" id="item-list-selling-dock-edit" class="item-list-edit"
+              rel="i18n[list.action.edit]"></a>
+            -->
+            <a href="#" id="item-list-selling-dock-refine" class="item-list-refine">
+              <span rel="i18n[list.action.refine]"></span>
+              <span id="item-list-selling-dock-filter"
+                class="item-list-refine-area">(<span id="item-list-selling-dock-filter-text"></span>)</span>
+            </a>
+          </div>
+          <div id="item-list-selling-dock-cancel-header" class="item-list-box-cancel-header">
+            <a href="#" id="item-list-selling-dock-cancel" rel="i18n[list.action.cancel]"></a>
+          </div>
+        </div>
+        <div id="panel-selling-float-header-box" class="item-list-box-float-header-box">
+          <div id="item-list-selling-float-edit-header" class="item-list-box-edit-header">
+          <!-- XXX: TODO: hide the Edit links because the Api we use to delete items for the GMEB and GMES is not working right now for us.
+            <a href="#" id="item-list-selling-float-edit"  class="item-list-edit"
+              rel="i18n[list.action.edit]"></a>
+            -->
+            <a href="#" id="item-list-selling-float-refine" class="item-list-refine float-refine">
+              <span rel="i18n[list.action.refine]"></span>
+              <span id="item-list-selling-float-filter"
+                class="item-list-refine-area">(<span id="item-list-selling-float-filter-text"></span>)</span>
+            </a>
+          </div>
+          <div id="item-list-selling-float-cancel-header" class="item-list-box-cancel-header">
+            <a href="#" id="item-list-selling-float-cancel" rel="i18n[list.action.cancel]"></a>
+          </div>
+        </div>
+        <div id="panel-selling-full-list"></div>
+      </div>
+      <div id="panel-selling-full-converted-currency-note" class="panel-converted-currency-note"
+        rel="i18n[list.converted.currency.note]"></div>
+    </div>
+    <div id="panel-selling-lazy-loading" class="lazy-loading">
+      <div class="panel-loading-spinner panel-lazy-loading-spinner"></div>
+    </div>
+  </div>
+  <div id="panel-selling-buttons-container">
+    <div class="panel-selling-buttons-inner-container">
+      <button id="panel-selling-sell-button" data-update-tooltip="true" class="primary-button">
+        <div rel="i18n[empty.selling.sellItem.link]"></div>
+      </button>
+      <button id="panel-selling-draft-button" data-update-tooltip="true" class="secondary-button">
+        <div id="panel-selling-draft-count"></div>
+        <div rel="i18n[empty.selling.drafts.link]"></div>
+      </button>
+      <button id="panel-selling-delete-button" class="primary-button">
+        <div rel="i18n[list.action.delete]"></div>
+      </button>
+    </div>
+  </div>
+</div>

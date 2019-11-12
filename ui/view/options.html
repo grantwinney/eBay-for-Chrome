@@ -1,0 +1,66 @@
+<!--
+  - Copyright (C) 2007-2015 eBay Inc. All Rights Reserved.
+  -->
+
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/ui/skin/core/options.css" />
+  <link type="text/css" rel="stylesheet" href="/ui/skin/core/jquery-ui.min.css"/>
+  <link type="text/css" rel="stylesheet" href="/ui/skin/core/jquery.mCustomScrollbar.min.css"/>
+
+  <script type="text/javascript" src="/lib/jquery-2.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/background/i18n.js"></script>
+  <script type="text/javascript" src="/lib/src/jquery.i18n.js"></script>
+  <script type="text/javascript" src="/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="/lib/lodash.min.js"></script>
+
+  <script type="text/javascript" src="/background/core/ebay-client.js"></script>
+
+  <script type="text/javascript" src="/background/configs/endpoints.js"></script>
+  <script type="text/javascript" src="/background/configs/sites.js"></script>
+  <script type="text/javascript" src="/background/configs/urls.js"></script>
+  <script type="text/javascript" src="/background/configs/init.js"></script>
+
+  <script type="text/javascript" src="/background/core/configs/endpoints.js"></script>
+  <script type="text/javascript" src="/background/core/configs/rover.js"></script>
+  <script type="text/javascript" src="/background/core/configs/sites.js"></script>
+  <script type="text/javascript" src="/background/core/configs/urls.js"></script>
+  <script type="text/javascript" src="/background/core/configs/init.js"></script>
+
+  <script type="text/javascript" src="/background/core/helpers/browserHelper.js"></script>
+  <script type="text/javascript" src="/background/helpers/logger.js"></script>
+  <script type="text/javascript" src="/background/helpers/timer.js"></script>
+  <script type="text/javascript" src="/background/core/helpers/topics.js"></script>
+  <script type="text/javascript" src="/background/helpers/observerHelper.js"></script>
+  <script type="text/javascript" src="/background/helpers/utilityHelper.js"></script>
+  <script type="text/javascript" src="/background/core/helpers/site.js"></script>
+  <script type="text/javascript" src="/background/core/storage/propertyDAO.js"></script>
+  <script type="text/javascript" src="/background/core/helpers/roverUrlHelper.js"></script>
+  <script type="text/javascript" src="/background/core/helpers/objectHelper.js"></script>
+  <script type="text/javascript" src="/background/core/storage/propertyDAO.js"></script>
+  <script type="text/javascript" src="/background/core/objects/account.js"></script>
+  <script type="text/javascript" src="/background/core/updateController.js"></script>
+  <script type="text/javascript" src="core/options.js"></script>
+  <script type="text/javascript" src="core/optionsGeneral.js"></script>
+  <script type="text/javascript" src="core/optionsAlerts.js"></script>
+  <script type="text/javascript" src="core/optionsLegal.js"></script>
+</head>
+<body id="main-window">
+  <div class="settings-title" rel="i18n[options.title]"></div>
+  <div class="main-content">
+    <div class="navbar-container">
+      <ul class="navbar">
+        <li id="nav-item-general" class="navbar-item" panel="general" rel="i18n[options.button.general]"></li>
+        <li id="nav-item-alerts" class="navbar-item" panel="alerts" rel="i18n[options.button.alerts]"></li>
+        <li id="nav-item-legal" class="navbar-item" panel="legal" rel="i18n[options.button.legal]"></li>
+      </ul>
+    </div>
+    <div class="main-view">
+      <div id="pane-general"></div>
+      <div id="pane-alerts"></div>
+      <div id="pane-legal"></div>
+    </div>
+  </div>
+</body>
+</html>

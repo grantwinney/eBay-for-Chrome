@@ -1,0 +1,343 @@
+/*!
+ * Copyright (C) 2007-2015 eBay Inc. All Rights Reserved.
+ */
+
+body {
+  cursor: default;
+  font-size: 13px;
+  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+  margin: 0px;
+  color: #333333;
+  /* prevent text selection */
+  -webkit-user-select: none !important;
+  /* This needs to be set or some font faced fonts look bold on Mac. */
+  -webkit-font-smoothing: antialiased !important;
+  /* Fix the spacing between letters */
+  text-rendering: optimizeLegibility !important;
+}
+body.Window {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #0b52c1;
+  font-weight: normal;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* radio buttons */
+input[type=radio] {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+input[type=radio] + label {
+  padding-left: 35px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  display: inline-block;
+  background: url("img/radio.png") no-repeat;
+  cursor: pointer;
+}
+
+input[type=radio]:checked + label,
+input[type=radio]:checked:hover + label {
+  background-image: url("img/radio-ticked.png");
+}
+
+input[type=radio]:hover + label {
+  background-image: url("img/radio-hover.png");
+}
+
+/* checkbox */
+input[type=checkbox] {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+input[type=checkbox] + label {
+  padding-left: 35px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("img/checkbox.png");
+  background-size: 20px 20px;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked + label,
+input[type=checkbox]:checked:hover + label {
+  background-image: url("img/checkbox-ticked.png");
+}
+input[type=checkbox]:hover + label {
+  background-image: url("img/checkbox-hover.png");
+}
+
+select {
+  -webkit-appearance: none;  /* Removes default chrome and safari style */
+  -moz-appearance: none; /* Removes Default Firefox style */
+  background: url("img/option-select-down.png") no-repeat, linear-gradient(#f1f1f1, #ffffff 40%);
+  background-position: 215px 0px;
+  width: 236px;
+  height: 34px;
+  text-indent: 0.01px; /* Removes default arrow from firefox */
+  text-overflow: "";  /* Removes default arrow from firefox */
+  font-size: 14px;
+  color: #333333;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+  padding-left: 12px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  outline: none;
+}
+select:disabled {
+  opacity: 0.5;
+}
+
+.settings-title {
+  padding: 23px 0px 20px 22px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-content {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 73px;
+  bottom: 0px;
+}
+
+.navbar-container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 326px;
+  border-right: 1px solid #dddddd;
+}
+
+.navbar-container > .navbar {
+  -webkit-user-select: none;
+  list-style-type: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  color: #555555;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 17px 0px 18px 16px;
+  border-left: 6px solid transparent;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.navbar-item-selected {
+  font-weight: 600;
+  padding-right: 15px;
+  border-left: 6px solid #0b52c1;
+}
+
+.navbar-item.disabled {
+  color: #999999;
+}
+
+.main-view {
+  position: absolute;
+  left: 327px;
+  top: 0px;
+  height: 100%;
+  width: 70%;
+}
+
+.main-view > div {
+  padding: 16px 20px 16px 54px;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.content-section {
+  margin-bottom: 55px;
+}
+
+.content-section-row {
+  margin-top: 38px;
+}
+
+/* general */
+.general-country-title,
+.general-feedback-title {
+  margin-bottom: 20px;
+}
+
+.general-preferred-site-title {
+  margin-bottom: 24px;
+}
+
+#general-preferred-site-flag {
+  width: 30px;
+  height: 20px;
+  margin-right: 12px;
+}
+#general-preferred-site-flag.Australia {
+  content: url("img/flag-Australia.png");
+}
+#general-preferred-site-flag.Austria {
+  content: url("img/flag-Austria.png");
+}
+#general-preferred-site-flag.Belgium_Dutch {
+  content: url("img/flag-Belgium-Dutch.png");
+}
+#general-preferred-site-flag.Belgium_French {
+  content: url("img/flag-Belgium-French.png");
+}
+#general-preferred-site-flag.Canada {
+  content: url("img/flag-Canada.png");
+}
+#general-preferred-site-flag.CanadaFrench {
+  content: url("img/flag-CanadaFrench.png");
+}
+#general-preferred-site-flag.China {
+  content: url("img/flag-China.png");
+}
+#general-preferred-site-flag.France {
+  content: url("img/flag-France.png");
+}
+#general-preferred-site-flag.Germany {
+  content: url("img/flag-Germany.png");
+}
+#general-preferred-site-flag.HongKong {
+  content: url("img/flag-HongKong.png");
+}
+#general-preferred-site-flag.India {
+  content: url("img/flag-India.png");
+}
+#general-preferred-site-flag.Ireland {
+  content: url("img/flag-Ireland.png");
+}
+#general-preferred-site-flag.Italy {
+  content: url("img/flag-Italy.png");
+}
+#general-preferred-site-flag.Malaysia {
+  content: url("img/flag-Malaysia.png");
+}
+#general-preferred-site-flag.Netherlands {
+  content: url("img/flag-Netherlands.png");
+}
+#general-preferred-site-flag.Philippines {
+  content: url("img/flag-Philippines.png");
+}
+#general-preferred-site-flag.Poland {
+  content: url("img/flag-Poland.png");
+}
+#general-preferred-site-flag.Singapore {
+  content: url("img/flag-Singapore.png");
+}
+#general-preferred-site-flag.Spain {
+  content: url("img/flag-Spain.png");
+}
+#general-preferred-site-flag.Switzerland {
+  content: url("img/flag-Switzerland.png");
+}
+#general-preferred-site-flag.UK {
+  content: url("img/flag-UK.png");
+}
+#general-preferred-site-flag.US {
+  content: url("img/flag-US.png");
+}
+
+#general-preferred-site {
+  vertical-align: super;
+}
+
+.general-auto-detect-site-container {
+  margin-top: 20px;
+  margin-bottom: 34px;
+}
+
+.general-security-title {
+  margin-bottom: 33px;
+}
+
+/* alerts */
+.alerts-pane-content > .content-section {
+  margin-bottom: 45px;
+}
+.alerts-pane-content > .content-section > .content-section-row:first-child {
+  margin-top: 34px;
+}
+
+/* legal */
+.header-title > a {
+  font-weight: 600;
+}
+
+.legal-title {
+  margin-bottom: 28px;
+}
+
+.read-link-container {
+  margin-top: 28px;
+  margin-bottom: 48px;
+  color: #333333;
+}
+
+#legal-licence-frame-container {
+  overflow: hidden;
+  position: relative;
+  max-width: 750px;
+  height: 550px;
+  box-shadow: 0px 4px 2px -2px #cccccc;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+#legal-licence-frame {
+  width: 750px;
+  height: 890px;
+}
+
+.general-feedback-section {
+  display: none;
+}
+
+/* debug */
+.debug-title {
+  margin-bottom: 32px;
+}
+
+.debug-content-section > div {
+  margin-bottom: 38px;
+}
